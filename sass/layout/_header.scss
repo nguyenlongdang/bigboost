@@ -1,0 +1,83 @@
+.header {
+    &__top {
+        margin-top: 15px;
+
+        &-text {
+            color: $color-p;
+        }
+
+        &-item {
+            border-right: 1px solid #eeeeee;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        &-link {
+            padding: 0 12px;
+            color: $color-p;
+            text-transform: capitalize;
+
+            &:hover {
+                color: $bg-yellow;
+            }
+        }
+
+        &-dropdown {
+            &-link {
+                color: $color-dark;
+                padding: 4px 15px;
+                display: inline-block;
+
+                &:hover {
+                    color: $bg-yellow;
+                }
+            }
+        }
+    }
+
+    &__mid {
+        margin: 15px 0px;
+
+        &-btn {
+            background-color: $bg-yellow;
+            color: $color-white;
+            border-radius: 50%;
+            border: 0;
+            position: absolute;
+            top: 50%;
+            right: 4px;
+            transform: translateY(-50%);
+            height: 30px;
+            width: 30px;
+        }
+
+        &-icon {
+            &-link {
+                padding-left: 25px;
+            }
+
+            .fa-bars {
+                color: #b2b6be;
+            }
+        }
+    }
+
+    &__menu {
+        background: $bg-blue;
+
+        &-link {
+            color: $color-white;
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: 12px;
+            padding: 20px 30px 20px 0;
+            font-weight: 700;
+
+            &:hover {
+                color: $color-yellow;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.section {
+    &__menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      padding: 10px 15px;
+      background-color: #fff;
+      height: 100%;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(300px);
+      overflow-y: scroll;
+      transition: all 0.5s ease-in-out;
+  
+      &::-webkit-scrollbar {
+        width: 3px;
+        height: 7px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: #dddddd;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: #888888;
+      }
+  
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555555;
+      }
+  
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+  
+      &-header {
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      &-link {
+          text-transform: uppercase;
+          color: $color-dark;
+          display: inline-block;
+          padding: 4px 0px;
+
+          &:hover {
+              color: $color-yellow;
+          }
+      }
+    }
+  }
+  

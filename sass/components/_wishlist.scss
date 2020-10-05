@@ -1,0 +1,80 @@
+.section {
+  &__wishlist {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    padding: 10px 15px;
+    background-color: #fff;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(300px);
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #dddddd;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888888;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555555;
+    }
+
+    &-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    &-header {
+      text-transform: uppercase;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    &-thumb {
+      img {
+        height: 90px;
+        object-fit: cover;
+      }
+    }
+
+    &-name {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 160px;
+
+      a {
+        color: $color-dark;
+      }
+    }
+
+    &-btn {
+      &-link {
+        background-color: $bg-yellow;
+        color: $color-white;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 5px 15px;
+        border-radius: 20px;
+
+        &:hover {
+            color: $color-white;
+        }
+      }
+    }
+  }
+}
